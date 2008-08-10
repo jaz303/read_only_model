@@ -1,0 +1,16 @@
+ReadOnlyModel
+=============
+
+Makes ActiveRecord models read-only by rewriting all destructive database operations to raise ActiveRecord::ReadOnlyModel. Great for integration with legacy databases where all the business logic is in a separate codebase.
+
+Installation
+------------
+
+script/plugin install git://github.com/jaz303/read_only_model.git
+
+Usage
+-----
+
+class MyLegacyModel < ActiveRecord::Base
+  read_only_model
+end
